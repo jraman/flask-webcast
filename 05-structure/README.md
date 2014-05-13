@@ -1,4 +1,4 @@
-Directory structure:
+## Directory structure
 
 ```
 hello_app                               Root folder
@@ -16,4 +16,24 @@ hello_app                               Root folder
         ├── manage.py                   Launch script
         └── tests                       Unit tests package
             └── test_basics.py          Basic test cases
+```
+
+## Testing
+
+```
+MONGO_TEST_URI='mongodb://<user>:<passwd>@oceanic.mongohq.com:10097/<dbname>' FLASK_CONFIG='testing' python manage.py test
+```
+
+
+## Run Server
+#### Development Environment
+
+```
+MONGO_DEV_URI='mongodb://<user>:<passwd>@oceanic.mongohq.com:10097/<dbname>' python manage.py runserver
+```
+
+#### Production Environment
+
+```
+MONGO_URI='mongodb://<user>:<passwd>@oceanic.mongohq.com:10097/<dbname>' FLASK_CONFIG='production' python manage.py runserver
 ```
